@@ -159,3 +159,7 @@ if user_input := st.chat_input("Type your message..."):
         st.markdown(msg)
         st.session_state.messages.append({"role": "assistant", "content": msg})
         st.rerun()
+
+        st.write("All secrets loaded:")
+        st.write(st.secrets)  # Debug purpose only
+
