@@ -91,8 +91,7 @@
 
 
 
-
-# frontend/app.py
+ # app.py
 import streamlit as st
 from datetime import datetime, timedelta
 import pytz
@@ -100,8 +99,9 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
-SERVICE_ACCOUNT_INFO = st.secrets["D:\appointmentbooking\.streamlit\service_account"]
+SERVICE_ACCOUNT_INFO = st.secrets["service_account"]
 CALENDAR_ID = st.secrets["google"]["calendar_id"]
+
 
 def get_calendar_service():
     credentials = service_account.Credentials.from_service_account_info(
